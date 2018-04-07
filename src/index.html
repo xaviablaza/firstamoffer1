@@ -1,0 +1,313 @@
+<?php
+$msg = '';
+$msgClass = '';
+
+if(filter_has_var(INPUT_POST, 'submit')){
+  
+    $preapproval = htmlspecialchars($_POST['preapproval']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+
+    if(!empty($email) && !empty($preapproval) && !empty($Phone)){
+       
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+            // Failed
+            $msg = 'Please use a valid email';
+            $msgClass = 'alert-danger';
+        } else {
+            
+            $toEmail = 'johnrockloan@gmail.com';
+            $subject = 'Contact Request From'.$name;
+            $body = '<h2>Contact Request</h2>
+                <h4>preapproval</h4><p>'.$preapproval.'</p>
+                <h4>email</h4><p>'.$email.'</p>
+                <h4>phone</h4><p>'.$phone.'</p>
+            ';
+        
+            $headers = "MIME-Version: 1.0" ."\r\n";
+            $headers .="Content-Type:text/html;charset=UTF-8" . "\r\n";
+
+            
+            $headers .= "From: " .$name. "<".$email.">". "\r\n";
+
+            if(mail($toEmail, $subject, $body, $headers)){
+                // Email Sent
+                $msg = 'Your email has been sent';
+                $msgClass = 'alert-success';
+            } else {
+                // Failed
+                $msg = 'Your email was not sent';
+                $msgClass = 'alert-danger';
+            }
+        }
+    } else {
+        // Failed
+        $msg = 'Please fill in all fields';
+        $msgClass = 'alert-danger';
+    }
+}
+
+}
+   
+?>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>FirstAmOffer</title>
+    </head>
+    <body id="home">
+       <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">FirstAmOffer</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="clollapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                              </li>
+                            <li class="nav-item">
+                            <a href="#testimonials-head-section" class="nav-link">Testimonials</a>
+                              </li>
+                            <li class="nav-item">
+                                <a href="#hecm-head-section" class="nav-link">HECM</a>
+                              </li>
+                            <li class="nav-item">
+                                <a href="#fahl-head-section" class="nav-link">FAHL</a>
+                              </li>
+                    </ul>
+                </div>
+            </div>
+       </nav>
+
+       <!-- HOME SECTION -->
+       <header id="home-section">
+        <div class="dark-overlay">
+           <div class="home-inner">
+             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="display-4"> Never make another mortgage payment while you live in your home. &nbsp;</h1><h2>Just Pay taxes and insurance</h2>
+                        <div class="d-flex flex-row">
+                            <div class="p-4 align-self-start">
+                              <i class="fa fa-check"></i>  
+                            </div>
+                            <div class="p-4 align-self-end">
+                                <h2>No Minimum Credit Score</h2> 
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="p-4 align-self-start">
+                              <i class="fa fa-check"></i>  
+                            </div>
+                            <div class="p-4 align-self-end">
+                               <h2>Retain Full Ownwership of your Home</h2> 
+                            </div>
+                        </div><div class="d-flex flex-row">
+                            <div class="p-4 align-self-start">
+                              <i class="fa fa-check"></i>  
+                            </div>
+                            <div class="p-4 align-self-end">
+                               <h2>Will Not Affect Your Social Secuity or Medicare Benefits</h2> 
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-lg-4">      
+                          <div class="card bg-primary text-center card-form">
+                            <div class="card-body">
+                                <form method="post" action="<?php echo $_SERVER['PHP_SELF']">
+                                    <h3>Get Your Free Proposal</h3>
+                                      <p>Please fill out the form to request your <br>"no obligation" free proposal</p>
+                                      <div class="form group">
+                                         <input type="text" 
+                                         class="form-control form control-lg" placeholder="Pre-Approval Number">
+                                            </div> 
+                                           <div class="form group">
+                                                   <input type="email" 
+                                                   class="form-control form control-lg" placeholder="Email Address">
+                                                   </div> 
+                                                   <div class="form group">
+                                                   <input type="test" 
+                                                 class="form-control form control-lg" placeholder="Phone Number (optional)">
+                                                  </div> 
+                                               <input type="submit" value="submit" name="submit" class="btn btn-outline-light btn-block">   
+                                 
+                                        </form>    
+                                </div>
+                            </div> 
+                          </div>                       
+                            </div>
+                         </div>
+                       </div>
+                    </div>
+                </div>
+              </div>  
+           </div> 
+        </div>
+       </header>
+
+       <!--Testimonials Head -->
+       <section id="testimonials-head-section">
+           <div class="contianer">
+               <div class="row">
+                   <div class="col text-center">
+                   <div class="p-5">
+                       <h1 class="display-4">Testimonials</h1>
+                       <p class="lead">First American Home Loans puts our clients interests above all else and promises a smooth and transparent loan process.</p>
+                   </div>
+               </div>
+           </div>
+        </div>
+       </section>
+
+       <!--Testimonials Section -->
+       <section id="testimonials-section" class="bg-light text-muted py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                        <img src="img/testimonials-section1.jpeg" alt="" class="img-fluid mb-3 rounded-circle">
+                </div>
+                <div class="col-md-6">
+                   <h3>Mr. and Mrs. Melvin McCullor</h3>
+                   <p>"The staff at First American Home Loans was very friendly and informative.  They took the time to undertand our needs and kept us infomed at all times during the process.  Now that our loan is closed, my wife and I both agree this was the best decision for our family"</p>
+                   <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                          <i class="fa fa-check"></i>  
+                        </div>
+                        <div class="p-4 align-self-end">
+                            "We have the peace of mind that we will never have to move or make another mortgage payment"
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                            <div class="p-4 align-self-start">
+                              <i class="fa fa-check"></i>  
+                            </div>
+                            <div class="p-4 align-self-end">
+                                "Also with the additional cash and savings, we were able to remodel our kitchen and go on a long-overdue vacation!"
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+       </section>
+
+         <!--HECM Head -->
+         <section id="hecm-head-section" class="bg-primary">
+                <div class="contianer">
+                    <div class="row">
+                        <div class="col text-center">
+                        <div class="p-5">
+                            <h1 class="display-4">Home Equity Conversion Mortgage</h1>
+                            <p class="lead">A HECM allows homeowners age 62 and older to enhance their retirment by eliminating their monthly mortgage payment and convert the equity in their home into tax-free cash </p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            </section>
+
+            <!--hecm Section -->
+       <section id="hecm-section" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                            <h3>Home Equity Conversion Mortgage</h3>
+                            <p>The Department of Housing and Urban Development (HUD) a branch of the federal govement created the program because they understood the majority of retirees are on a fixed income.  The (FHA) Federal Housing Administration insures the program guaranteeing seniors are protected.</p>
+                            <div class="d-flex flex-row">
+                                 <div class="p-4 align-self-start">
+                                   <i class="fa fa-check"></i>  
+                                 </div>
+                                 <div class="p-4 align-self-end">
+                                    Pay off credit cards, medical bills and other debts or obligations.
+                                 </div>
+                             </div>
+                             <div class="d-flex flex-row">
+                                     <div class="p-4 align-self-start">
+                                       <i class="fa fa-check"></i>  
+                                     </div>
+                                     <div class="p-4 align-self-end">
+                                         Get funds for home improvements and build a saftey net for unplanned expenses.
+                                     </div>
+                                 </div>
+                    </div>
+                    <div class="col-md-6">
+                            <img src="img/hecm-section1.jpeg" alt="" class="img-fluid mb-3 rounded-circle">
+                    </div>
+                </div>
+            </div>
+           </section>
+
+            <!--fahl Head -->
+       <section id="fahl-head-section" class="bg-primary">
+            <div class="contianer">
+                <div class="row">
+                    <div class="col text-center">
+                    <div class="p-5">
+                        <h1 class="display-4">First American Home Loans, Inc.</h1>
+                        <p class="lead">With over two decades of lending experience, our team of highly-trained professionals are here to answer your questions and assist with each step of the process.</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </section>
+ 
+        <!--fahl Section -->
+        <section id="fahl-section" class="bg-light text-muted py-5">
+         <div class="container">
+             <div class="row">
+                 <div class="col-6">
+                         <img src="img/fahl-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                 </div>
+                 <div class="col-md-6">
+                    <h2>Frequently Asked Questions</h2>
+                    <h5>"Do I still own my home and what happens to my home after I am gone?"</h5>
+                    <div class="d-flex flex-row">
+                         <div class="p-4 align-self-start">
+                           <i class="fa fa-check"></i>  
+                         </div>
+                         <div class="p-4 align-self-end">
+                             Yes, you still own your home and remain on title.  You can sell or refinance at anytime without penalty.
+                         </div>
+                     </div>
+                     <div class="d-flex flex-row">
+                             <div class="p-4 align-self-start">
+                               <i class="fa fa-check"></i>  
+                             </div>
+                             <div class="p-4 align-self-end">
+                                 Your heirs will be able to pay off the balance and keep the home or sell the property and keep the remaining funds after the balance is paid off.
+                             </div>
+                         </div>
+ 
+                 </div>
+             </div>
+         </div>
+        </section>
+
+        <!--Main Footer-->
+        <footer id="main-footer" class="bg dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                     <div class="py-4">
+                         <h1 class="h3>">First American Home Loans, Inc.</h1>
+                         <h4>1748 W. Katella Ave Ste. 204, Orange, CA 92867</h4>
+                         <h4>800-965-5105</h4>
+                         <h5>NMLS # 197155</h5>
+                         <p>Copyright &copy; 2018</p>
+                     </div>   
+                    </div>
+                </div>
+            </div>
+        </footer>
+ 
+           <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
