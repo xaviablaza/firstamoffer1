@@ -1,0 +1,5 @@
+baseURL = "http://gracious-ride-0ad99f.netlify.com"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugo-firstamoffer-theme"
+googleAnalytics = "UA-108392944-2"
