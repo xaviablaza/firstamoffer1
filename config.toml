@@ -1,4 +1,4 @@
-baseURL = "http://firstamoffer.com"
+baseURL = "https://firstamoffer.com"
 languageCode = "en-us"
 title = "FirstAmOffer"
 theme = "hugo-creative-theme"
