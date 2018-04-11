@@ -1,19 +1,69 @@
 {{ "<!-- HEADER -->" | safeHTML }}
 <header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            {{ with .Site.Params.hero.slogan }}
+    <div class="container-fluid header-content">
+        <div class="row header-content-inner">
+            <div class="col-lg-6">
+                {{ with .Site.Params.hero.slogan }}
                 <h1>{{ . | markdownify  }}</h1>
-            {{ end }}
-            {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
+                {{ end }}
+                {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
                 <hr>
-            {{ end }}
-            {{ with .Site.Params.hero.subtitle }}
+                {{ end }}
+                {{ with .Site.Params.hero.subtitle }}
                 <p>{{ . | markdownify }}</p>
-            {{ end }}
-            {{ with .Site.Params.hero.buttonText }}
+                {{ end }}
+                {{ with .Site.Params.hero.buttonText }}
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
-            {{ end }}
+                {{ end }}
+            </div>
+            <div class="col-lg-6">
+
+                <div class="card bg-light mb-3" style="background:rgba(240, 95, 64, 0.7);">
+                    <div class="card-header" style="margin-top: 10px;">
+                        <h3 style="padding-top:10px;">Get Your Free Proposal</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Please fill out the form to request your "no obligation" free proposal:</h5>
+                        <p class="card-text">
+                            <form action="https://formspree.io/rock@firstamericanhomeloans.com" method="POST">
+                                <div class="form group">
+                                    <input type="text" name="pre-approval-number" class="form-control form control-lg" placeholder="Pre-Approval Number">
+                                </div>
+                                <div class="form group">
+                                    <input type="email" name="_replyto" class="form-control form control-lg" placeholder="Email Address">
+                                </div>
+                                <div class="form group">
+                                    <input name="phone" class="form-control form control-lg" placeholder="Phone Number (optional)">
+                                </div>
+                                <input type="submit" value="Submit" class="btn btn-primary btn-block" style="border-radius:0;">
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--<div class="container">-->
+        <!--<div class="col-lg-4">-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="header-content">-->
+        <!--<div class="header-content-inner">-->
+            <!--{{ with .Site.Params.hero.slogan }}-->
+                <!--<h1>{{ . | markdownify  }}</h1>-->
+            <!--{{ end }}-->
+            <!--{{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}-->
+                <!--<hr>-->
+            <!--{{ end }}-->
+            <!--{{ with .Site.Params.hero.subtitle }}-->
+                <!--<p>{{ . | markdownify }}</p>-->
+            <!--{{ end }}-->
+            <!--{{ with .Site.Params.hero.buttonText }}-->
+                <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>-->
+            <!--{{ end }}-->
+        <!--</div>-->
+    <!--</div>-->
 </header>

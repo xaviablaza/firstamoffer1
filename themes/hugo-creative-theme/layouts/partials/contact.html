@@ -9,7 +9,7 @@
                 {{ if and .Site.Params.contact.headline .Site.Params.contact.description }}
                     <hr class="primary">
                 {{ end }}
-                {{ with .Site.Params.contact.description }}
+                {{ with .Site.Params.contact.description | safeHTML }}
                     <p>{{ . | markdownify }}</p>
                 {{ end }}
             </div>

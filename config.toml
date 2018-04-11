@@ -1,5 +1,94 @@
 baseURL = "http://gracious-ride-0ad99f.netlify.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "hugo-firstamoffer-theme"
+title = "FirstAmOffer"
+theme = "hugo-creative-theme"
 googleAnalytics = "UA-108392944-2"
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# most longer texts.
+
+	# All icons using Fontawesome's icon font. Look at http://fontawesome.io/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# All projects of the portfolio are defined in their own files.
+	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
+	# folder into the 'data' directory at the root of this Hugo site.
+	# For more information take a look at the README.
+
+	# To provide some metadata for search engines feel free to add some
+	# information about you and your website.
+	name = "Your name"
+	description = "Your description"
+
+	# The path must be relative to the static folder
+	favicon = "favicon.ico"
+
+
+	# Navigation
+	[params.navigation]
+		brand = "FirstAmOffer"
+
+		[params.navigation.links]
+			about     = "Testimonials"
+			services  = "HECM"
+			portfolio = "Portfolio"
+			contact   = "FAHL"
+
+
+	# Hero section
+	[params.hero]
+		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+		slogan     = "Never make another mortgage payment while you live in your home."
+		subtitle   = "Just pay taxes and insurance, no need for a minimum credit score. Retain full ownership of your home, with no effect on your social security or medicare benefits."
+		buttonText = "Find out more"
+
+
+	# About section
+	[params.about]
+		headline    = "Testimonials"
+		description = "We at First American Home Loans put our clients' interests above all else and promise a smooth and transparent loan process."
+		#buttonText  = "Get started!"
+
+
+	# Service section
+	[params.services]
+		headline = "Frequently Asked Questions"
+		subtitle = ""
+
+        [[params.services.list]]
+            icon = "fa-home"
+            title = "Do I still own my home <br>after I am gone?"
+            description = "Yes, you will still own your <br>home and remain on title."
+
+        [[params.services.list]]
+			icon = "fa-question-circle"
+			title = "Are there any financing restrictions?"
+			description = "No, you may sell or refinance<br> at anytime without penalty."
+
+		[[params.services.list]]
+            icon = "fa-users"
+            title = "Will my heirs be able to <br>finance my home?"
+            description = "Yes, they may pay off the balance and keep the home or sell the property and keep the remaining funds once the balance is paid off."
+
+    # Portfolio modals
+	[params.portfolio.modal]
+        client = "Client"
+        date = "Date"
+        category = "Category"
+        buttonText = "Close"
+
+	# Contact section
+	[params.contact]
+		headline = "First American Home Loans, Inc."
+		description = "1748 W. Katella Ave Ste. 204, Orange, CA 92867<br> NMLS # 197155<br> Copyright © 2018"
+		phone = "800-965-5105"
+		email = "rock@firstamericanhomeloans.com"
+
+	# Google Maps section
+	# [params.location]
+	# 	latitude  = "34.007850"
+	# 	longitude = "-118.499305"
+	# 	maps_api_key = ""
