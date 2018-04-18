@@ -29,7 +29,7 @@ googleAnalytics = "UA-108392944-2"
 
 	# Navigation
 	[params.navigation]
-		brand = "<img src='img/logo.png'></img>"
+		brand = "FirstAmOffer"
 
 		[params.navigation.links]
 			about     = "Testimonials"
@@ -82,7 +82,7 @@ googleAnalytics = "UA-108392944-2"
 
 	# Contact section
 	[params.contact]
-		headline = "First American Home Loans, Inc."
+		headline = "<img src='img/logo.png' id='contact_header'></img>"
 		description = "1748 W. Katella Ave Ste. 204, Orange, CA 92867<br> NMLS # 197155<br> Copyright © 2018"
 		phone = "800-965-5105"
 		email = "info@firstamericanhomeloans.com"
