@@ -534,3 +534,25 @@ body {
     background: #333;
     color: white;
 }
+
+
+.navbar-header {
+    min-height: 70px;
+    /*background-color: #ffffff1a;*/
+}
+.navbar-toggle{
+    margin-top: 20px;
+}
+
+.navbar-brand{
+    padding: 10px 0px 0px 10px;
+
+}
+.navbar-brand>img{
+    height: 100% !important;
+}
+
+.navbar-nav.navbar-right{
+    padding-top: 10px;
+}
+

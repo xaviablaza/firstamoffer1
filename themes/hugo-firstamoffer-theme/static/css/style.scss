@@ -66,3 +66,18 @@ body{
     font-size:$icon-size;
   }
 }
+
+#MainNav {
+  min-height: 70px;
+
+  .navbar-brand{
+    padding: 10px 0px 0px 10px;
+    img{
+      height: 100%;
+    }
+  }
+  .navbar-nav.navbar-right{
+    padding-top: 10px;
+  }
+  background-color: #fff3;
+}
