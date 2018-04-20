@@ -561,6 +561,10 @@ body {
     /*padding-top: 10px;*/
 /*}*/
 
+.header-content .form.group{
+    padding: .5rem;
+}
+
 #contact_header{
     height: 10rem;
 }
