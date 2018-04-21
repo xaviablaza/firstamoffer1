@@ -29,7 +29,7 @@ googleAnalytics = "UA-108392944-2"
 
 	# Navigation
 	[params.navigation]
-		brand = "FirstAmOffer"
+		brand = "<img src='img/logo.png' id='contact_header'></img>"
 
 		[params.navigation.links]
 			about     = "Testimonials"
