@@ -1,24 +1,7 @@
 {{ "<!-- HEADER -->" | safeHTML }}
 <header>
     <div class="container-fluid header-content">
-        <div class="row header-content-inner" style = "margin-bottom:20px;">
-            <div class="col-lg-6">
-                {{ with .Site.Params.hero.slogan }}
-                <h2 style = "font-weight:bold;">{{ . | markdownify  }}</h2>
-                {{ end }}
-                {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
-                <hr>
-                {{ end }}
-                {{ with .Site.Params.hero.subtitle2 }}
-                <p style = "margin-top:20px;margin-bottom:20px;">{{ . | markdownify }}</p>
-                {{ end }}
-                {{ with .Site.Params.hero.subtitle1 }}
-                <p style = "margin-bottom:20px; font-size:14px;">{{ . | markdownify }}</p>
-                {{ end }}
-                {{ with .Site.Params.hero.buttonText }}
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
-                {{ end }}
-            </div>
+        <div class="row header-content-inner" style = "margin-bottom:20px;margin-top:0px;">
             <div class="col-lg-6">
 
                 <div class="card bg-light mb-3" id="free-proposal" >
@@ -70,14 +53,34 @@
                     </div>
                 </div>
 
-                <div class="card bg-light" style="background:rgba(111, 111, 111, 0.5);">
+                <div class="card bg-light" style="background:rgba(200,127,80, 0.5);">
                     <div class="card-body">
                         <h3 style="padding:20px;" class="card-title">Or call now to speak to one of our senior specialists!</h3>
-                        <p class="card-text" style="color:white; margin-bottom: 30px;"><a href="tel:{{ .Site.Params.contact.phone }}">{{ .Site.Params.contact.phone }}</a></p>
+                        <p class="card-text" style="color:white; margin-bottom: 30px;"><a style = "color:white; font-size:35px;"href="tel:{{ .Site.Params.contact.phone }}">{{ .Site.Params.contact.phone }}</a></p>
                         <a href="#contact" style="margin-bottom:20px;" class="btn btn-primary btn-xl page-scroll">CALL NOW</a>
                     </div>
                 </div>
 
+            </div>
+            <div class="col-lg-6">
+                {{ with .Site.Params.hero.slogan }}
+                <h2 style = "font-weight:bold;">{{ . | markdownify  }}</h2>
+                {{ end }}
+                {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
+                <hr>
+                {{ end }}
+                {{ with .Site.Params.hero.subtitle2 }}
+                <p style = "margin-top:20px;margin-bottom:20px;">{{ . | markdownify }}</p>
+                {{ end }}
+                {{ with .Site.Params.hero.subtitle1 }}
+                <p style = "margin-bottom:20px; font-size:14px;">{{ . | markdownify }}</p>
+                {{ end }}
+                {{ with .Site.Params.hero.buttonText1 }}
+                <a href="#services" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
+                {{ end }}
+                {{ with .Site.Params.hero.buttonText2 }}
+                <a href="#faq" class="btn btn-primary btn-xl page-scroll" style="margin-left:10px;margin-right:10px;">{{ . }}</a>
+                {{ end }}
             </div>
         </div>
     </div>

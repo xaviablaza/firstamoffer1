@@ -44,7 +44,8 @@ googleAnalytics = "UA-108392944-2"
 		slogan     = "No Monthly Mortgage Payments Required. Just pay taxes and Insurance. "
 		subtitle1 = "Optional payments allow you to control your Cash Flow."
 		subtitle2   = "No need for a minimum credit score. Retain full ownership of your home, with no effect on your Social Security or Medicare benefits."
-		buttonText = "Find out more"
+		buttonText1 = "Find out more"
+		buttonText2 = "Questions?"
 
 
 	# About section
