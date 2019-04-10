@@ -4,7 +4,7 @@
         <div class="row header-content-inner" style = "margin-bottom:20px;">
             <div class="col-lg-6">
                 {{ with .Site.Params.hero.slogan }}
-                <h1>{{ . | markdownify  }}</h1>
+                <h2 style = "font-weight:bold;">{{ . | markdownify  }}</h2>
                 {{ end }}
                 {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
                 <hr>
