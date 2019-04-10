@@ -41,8 +41,9 @@ googleAnalytics = "UA-108392944-2"
 	# Hero section
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
-		slogan     = "No Monthly Mortgage Payments Required. Optional payments allow you to control your Cash Flow. Just pay taxes and Insurance."
-		subtitle   = "No need for a minimum credit score. Retain full ownership of your home, with no effect on your Social Security or Medicare benefits."
+		slogan     = "No Monthly Mortgage Payments Required. Just pay taxes and Insurance. "
+		subtitle1 = "Optional payments allow you to control your Cash Flow."
+		subtitle2   = "No need for a minimum credit score. Retain full ownership of your home, with no effect on your Social Security or Medicare benefits."
 		buttonText = "Find out more"
 
 
