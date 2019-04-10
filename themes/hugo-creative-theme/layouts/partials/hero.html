@@ -1,7 +1,7 @@
 {{ "<!-- HEADER -->" | safeHTML }}
 <header>
     <div class="container-fluid header-content">
-        <div class="row header-content-inner">
+        <div class="row header-content-inner" style = "margin-bottom:20px;">
             <div class="col-lg-6">
                 {{ with .Site.Params.hero.slogan }}
                 <h1>{{ . | markdownify  }}</h1>
@@ -9,8 +9,11 @@
                 {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
                 <hr>
                 {{ end }}
-                {{ with .Site.Params.hero.subtitle }}
-                <p>{{ . | markdownify }}</p>
+                {{ with .Site.Params.hero.subtitle2 }}
+                <p style = "margin-top:20px;margin-bottom:20px;">{{ . | markdownify }}</p>
+                {{ end }}
+                {{ with .Site.Params.hero.subtitle1 }}
+                <p style = "margin-bottom:20px; font-size:14px;">{{ . | markdownify }}</p>
                 {{ end }}
                 {{ with .Site.Params.hero.buttonText }}
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
