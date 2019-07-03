@@ -85,8 +85,8 @@ googleAnalytics = "UA-XXXXXXXXX-Y"
 	# Contact section
 	[params.contact]
 		headline = "<img src='img/logo.png' id='contact_header' style='height:80%;width:80%;'></img>"
-		description = "1748 W. Katella Ave Ste. 204, Orange, CA 92867<br> NMLS # 197155<br> Copyright © 2018"
-		phone = "800-769-7240"
+		description = "1748 W. Katella Ave Ste. 204, Orange, CA 92867<br> NMLS # 197155<br> Copyright © 2019"
+		phone = "800-965-5105"
 		email = "info@firstamericanhomeloans.com"
 
 	# Google Maps section
