@@ -16,7 +16,7 @@
 
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="background:rgba(200,127,80, 0.5);">
                 {{ with .Site.Params.hero.slogan }}
                 <h2 style = "font-weight:bold;">{{ . | markdownify  }}</h2>
                 {{ end }}
@@ -35,7 +35,7 @@
                 {{ with .Site.Params.hero.buttonText2 }}
                 <a href="#faq" class="btn btn-primary btn-xl page-scroll" style="margin-left:10px;margin-right:10px;">{{ . }}</a>
                 {{ end }}
-                <div class="card bg-light" style="background:rgba(200,127,80, 0.5);">
+                <div class="card bg-light">
                     <div class="card-body">
                         <h3 style="padding:20px;" class="card-title">Or call now to speak to one of our senior specialists!</h3>
                         <p class="card-text" style="color:white; margin-bottom: 30px;"><a style = "color:white; font-size:35px;"href="tel:{{ .Site.Params.contact.phone }}">{{ .Site.Params.contact.phone }}</a></p>
